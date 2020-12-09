@@ -1,0 +1,55 @@
+实验目的
+掌握字符串String及其方法的使用
+掌握文件的读取/写入方法
+掌握异常处理结构
+
+实验要求：
+设计学生类（可利用之前的）；
+采用交互式方式实例化某学生；
+设计程序完成上述的业务逻辑处理，并且把“古诗处理后的输出”结果存储到学生基本信息所在的文本文件A中。
+实验过程 
+首先建立三个类。分被命名为FileInAndOut，JudgeException,Student,test.
+FileInAndOut类的主要作用是将输入的长恨歌按照七个一组的方式分成组，并在后面填上标点符号关键程序是输入和输出的接口
+char[] a = new char[100];//缓存，
+		try {
+			File file = new File("D:\\B.txt");
+			InputStream fli = new FileInputStream(file);
+			InputStreamReader in = new InputStreamReader(fli, "GBK");
+		while((n=in.read(a,0,100))!=-1) {
+		String s = new String(a,0,n);
+		this.n=n;
+		if(original!=null)
+		original = original+s;
+		else original=s;
+		}
+		
+        in.close();
+      	}
+		catch (IOException e) {
+			System.out.println("File read erroe:"+e);
+		}
+    将D盘文件B写入，经过计算，将文件A写出
+
+File file = new File("D:\\A.txt");
+			OutputStream out = new FileOutputStream(file,true);
+			
+            out.write(b);
+            out.flush();
+            out.close();
+           
+		}
+		catch (IOException e) {
+			System.out.println("File read erroe:"+e);
+		}
+  JudgeException用来判断，当输入性别不正确时基于报错。
+实验结果  
+  个人信息：
+姓名 性别 年龄 学号
+z   男    20   12
+触发异常...
+信息导入成功！
+作业导入成功！  
+
+实验体会
+进行了接口的学习，让我感觉在Java的路上有了更近一步，阅读了书，但是并没有完全搞懂，还是请教了同学帮助解答
+我还要在学习Java的路上继续行走。
